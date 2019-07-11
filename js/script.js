@@ -52,15 +52,18 @@ console.log(quotez);
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-var randNum = 0;
+//var randNum = 0;
 function getRandomQuote () {
-  return Math.floor((Math.random()*(quotez.length)));
+  var store = Math.floor((Math.random()*(quotez.length))) 
+  return (quotez[store]);
+  //return Math.floor((Math.random()*(quotez.length)));
 };
 //console.log(getRandomQuote(quotez.length));
-randNum += getRandomQuote();
-console.log(randNum);
+//randNum += getRandomQuote();
+//console.log(randNum);
+//console.log(quotez[randNum]);
+console.log(getRandomQuote());
 
-console.log(quotez[randNum]);
 
 
 
@@ -77,9 +80,16 @@ console.log(quotez[randNum]);
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 function printQuote () {
-  var format = "";
-};
+  var selectQuote = getRandomQuote();
+  var div = document.getElementById('quote-box');
+    div.innerHTML = '<p class="saying">'+ quotez.saying + '</p>';
+    //<p class="sOurce">(quotez.s0urce)<span class="citation">(quotez.citation)</span><span class="year">(quotez.year)</span></p>;
 
+  return selectQuote;
+  //format + quotez.saying;
+
+};
+console.log(printQuote());
 
 
 /***
