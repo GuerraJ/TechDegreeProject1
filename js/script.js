@@ -49,15 +49,19 @@ console.log (randomQ[3]);
 var quotez=[
   {
     saying: "do or do not. there is no try.",
-    s0urce: "Yoda"
+    s0urce: "Yoda",
+    year: "1980",
+    citation: "(The Empire Strikes Back)"
   },
   {
-    saying: "get 'er done",
-    s0urce: "Larry, the Cable Guy"
+    saying: "We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes – understanding that failure is not the opposite of success, it’s part of success.",
+    s0urce: "Arianna Huffington"
   },
   {
     saying: "Goonies never say die",
-    s0urce: "Michael 'Mikey' Walsh"
+    s0urce: "Michael 'Mikey' Walsh",
+    year: "1985",
+    citation: "(The Goonies)"
   },
   {
     saying: "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough",
@@ -65,7 +69,9 @@ var quotez=[
   },
   {
     saying: "Your future hasn't been written yet.  No one's has.  Your future is whatever you make it.  So make it a good one.",
-    s0urce: "Doc Brown"
+    s0urce: "Doc Brown",
+    year: "1985",
+    citation: "(Back to the Future)"
   }
 ]
 
@@ -102,7 +108,7 @@ console.log(quotez[randNum]);
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 function printQuote () {
-
+  var format = "";
 };
 
 
