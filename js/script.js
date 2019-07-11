@@ -14,37 +14,6 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-//created one array with quotes and log quotes to console//
-var quotes = [
-  "do or do not. there is no try.", 
-  "get 'er done", 
-  "Goonies never say die", 
-  "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough",
-  "Your future hasn't been written yet.  No one's has.  Your future is whatever you make it.  So make it a good one."
-];
-console.log (quotes);   
-
-//created one arrary with sources and log sources to console//
-var source = ["Yoda", "Larry, the Cable Guy", "Michael 'Mikey' Walsh", "Oprah Winfrey", "Doc Brown"];
-console.log(source);
-
-/*test code to create full quote with matching source
-
-    var q1 = quotes[0] + " -- " + source[0];
-    console.log (q1);
-    var q2 = quotes[1] + " -- " + source[1];
-    console.log (q2);
-    var q3 = quotes[2] + " -- " + source[2];
-    console.log (q3);
-    var q4 = quotes[3] + " -- " + source[3];
-    console.log (q4);
-    var q5 = quotes[4] + " -- " + source[4];
-    console.log (q5);
-*/
-
-//created an array that combines quote with matching source and log to console//
-var randomQ = [quotes[0] + " -- " + source[0], quotes[1] + " -- " + source[1], quotes[2] + " -- " + source[2], quotes[3] + " -- " + source[3], quotes[4] + " -- " + source[4]];
-console.log (randomQ[3]);
 
 var quotez=[
   {
@@ -76,7 +45,7 @@ var quotez=[
 ]
 
 console.log(quotez);
-console.log(quotez[4]);
+
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
