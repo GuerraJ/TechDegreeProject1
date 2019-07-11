@@ -77,6 +77,15 @@ console.log(quotez[4]);
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
+var randNum = 0;
+function getRandomQuote () {
+  return Math.floor((Math.random()*(quotez.length)));
+};
+//console.log(getRandomQuote(quotez.length));
+randNum += getRandomQuote();
+console.log(randNum);
+
+console.log(quotez[randNum]);
 
 
 
@@ -92,7 +101,9 @@ console.log(quotez[4]);
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
+function printQuote () {
 
+};
 
 
 
@@ -103,7 +114,7 @@ console.log(quotez[4]);
   comment.
 ***/
 
-//JEN REMOVE THIS COMMENT FOR FINAL CODE document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
