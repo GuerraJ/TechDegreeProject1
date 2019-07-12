@@ -61,3 +61,5 @@ function printQuote () {
 };
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+var intervalID = window.setInterval(printQuote, 20000);
