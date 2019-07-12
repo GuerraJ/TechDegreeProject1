@@ -48,8 +48,8 @@ function getRandomQuote () {
 function printQuote () {
   let selectQuote = getRandomQuote();
   let format = '';
-  format += '<p class="saying">'+ selectQuote.quote + '</p>';
-  format += '<p class="sOurce">'+ selectQuote.source; 
+  format += '<p class="quote">'+ selectQuote.quote + '</p>';
+  format += '<p class="source">'+ selectQuote.source; 
     if (selectQuote.citation !== undefined) {
      format += '<span class="citation">'+ (selectQuote.citation) + '</span>';
     };
