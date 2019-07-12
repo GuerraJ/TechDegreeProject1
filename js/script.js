@@ -80,16 +80,23 @@ console.log(getRandomQuote());
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 function printQuote () {
-  var selectQuote = getRandomQuote();
-  var div = document.getElementById('quote-box');
-    div.innerHTML = '<p class="saying">'+ quotez.saying + '</p>';
+  let selectQuote = getRandomQuote();
+  let format = '';
+    if (quotez.citation === undefined || quotez.year === undefined){
+      format += '<p class="saying">'+ selectQuote.saying + '</p>';
+      format += + '<p class="sOurce">'+ selectQuote.s0urce + '</p>'; 
+     
+
+    }
+  document.getElementById('quote-box').innerHTML = format;
+    //div.innerHTML = '<p class="saying">'+ quotez.saying + '</p>';
     //<p class="sOurce">(quotez.s0urce)<span class="citation">(quotez.citation)</span><span class="year">(quotez.year)</span></p>;
 
-  return selectQuote;
+  //return selectQuote;
   //format + quotez.saying;
 
 };
-console.log(printQuote());
+
 
 
 /***
