@@ -82,12 +82,17 @@ console.log(getRandomQuote());
 function printQuote () {
   let selectQuote = getRandomQuote();
   let format = '';
-    if (quotez.citation === undefined || quotez.year === undefined){
+    if (selectQuote.citation === undefined || selectQuote.year === undefined){
       format += '<p class="saying">'+ selectQuote.saying + '</p>';
-      format += + '<p class="sOurce">'+ selectQuote.s0urce + '</p>'; 
-     
-
-    }
+      format += '<p class="sOurce">'+ selectQuote.s0urce; 
+      format += '</p>';
+    } 
+     else {
+     format += '<p class="saying">'+ selectQuote.saying + '</p>';
+     format += '<p class="sOurce">' + selectQuote.s0urce + '<span class="citation">'+ (selectQuote.citation) + '</span>';
+     format += '<span class="year">' + selectQuote.year + '</span>' 
+     format += '</p>';
+    };
   document.getElementById('quote-box').innerHTML = format;
     //div.innerHTML = '<p class="saying">'+ quotez.saying + '</p>';
     //<p class="sOurce">(quotez.s0urce)<span class="citation">(quotez.citation)</span><span class="year">(quotez.year)</span></p>;
