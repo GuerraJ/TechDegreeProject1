@@ -14,16 +14,19 @@ const quotes=[
   },
   {
     quote: "We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes – understanding that failure is not the opposite of success, it’s part of success.",
-    source: "Arianna Huffington"
+    source: "Arianna Huffington",
+    tag: "business | boss lady"
   },
   {
     quote: "Goonies never say die.",
     source: "Michael 'Mikey' Walsh",
-    citation: "The Goonies"
+    citation: "The Goonies",
+    year: "1985"
   },
   {
     quote: "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.",
-    source: "Oprah Winfrey"
+    source: "Oprah Winfrey",
+    tag: "boss lady"
   },
   {
     quote: "Your future hasn't been written yet.  No one's has.  Your future is whatever you make it.  So make it a good one.",
@@ -43,7 +46,8 @@ function getRandomQuote () {
 /***
   Created `printQuote` function to call 'getRandomQuote' from above. 
   Created 'format' variable to build the HTML string to display/format quote, source for all and citation and/or year, where applicable  
-***/
+  Created 'changebackground' function to change background with each random quote display.
+  ***/
 
 function printQuote () {
   let selectQuote = getRandomQuote();
@@ -56,10 +60,24 @@ function printQuote () {
     if (selectQuote.year !== undefined) {
     format += '<span class="year">' + selectQuote.year + '</span>' 
     };
+    if (selectQuote.tag !== undefined) {
+      format += '<span class="year">'+ selectQuote.tag + '</span>' 
+      };
   format += '</p';
   document.getElementById('quote-box').innerHTML = format;
+    
+  changeBackground();
+  function changeBackground() {
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    document.body.style.background = bgColor;
+  };
+  changeBackground();
 };
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+//added 20 second timer to change quote if button is not clicked
 var intervalID = window.setInterval(printQuote, 20000);
